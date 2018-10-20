@@ -534,7 +534,7 @@ client.on('message' , message => {
      .setAuthor(client.user.username,client.user.avatarURL)
      .setThumbnail(client.user.avatarURL)
      .setColor('RANDOM')
-     .setTitle('``INFO  Dragon Bot`` ')
+     .setTitle('``INFO  PlanetBot`` ')
      .addField('``My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
      .addField('``servers``', [client.guilds.size], true)
      .addField('``channels``' , `[ ${client.channels.size} ]` , true)
@@ -4503,14 +4503,12 @@ client.on('message',async message => {
 client.on("message", message => {
   if (message.content === "d!help") {
 message.author.send(`**
-╭━━━╮╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━━╮╱╱╱╭╮
-╰╮╭╮┃╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃╭╮┃╱╱╭╯╰╮
-╱┃┃┃┣━┳━━┳━━┳━━┳━╮╱┃╰╯╰┳━┻╮╭╯
-╱┃┃┃┃╭┫╭╮┃╭╮┃╭╮┃╭╮╮┃╭━╮┃╭╮┃┃
-╭╯╰╯┃┃┃╭╮┃╰╯┃╰╯┃┃┃┃┃╰━╯┃╰╯┃╰╮
-╰━━━┻╯╰╯╰┻━╮┣━━┻╯╰╯╰━━━┻━━┻━╯
-╱╱╱╱╱╱╱╱╱╭━╯┃
-╱╱╱╱╱╱╱╱╱╰━━╯
+╭━━━┳╮╱╱╱╱╱╱╱╱╱╭╮╭━━╮╱╱╱╭╮
+┃╭━╮┃┃╱╱╱╱╱╱╱╱╭╯╰┫╭╮┃╱╱╭╯╰╮
+┃╰━╯┃┃╭━━┳━╮╭━┻╮╭┫╰╯╰┳━┻╮╭╯
+┃╭━━┫┃┃╭╮┃╭╮┫┃━┫┃┃╭━╮┃╭╮┃┃
+┃┃╱╱┃╰┫╭╮┃┃┃┃┃━┫╰┫╰━╯┃╰╯┃╰╮
+╰╯╱╱╰━┻╯╰┻╯╰┻━━┻━┻━━━┻━━┻━╯
 
 :record_button: ~~__**Create a room named log to start the log**__~~ :record_button: 
 :fire: __Action Commands:__
@@ -6188,7 +6186,7 @@ client.on('message', message => {
   if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
 if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
   let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
-  let copy = "Dragon Bot";
+  let copy = "PlanetBot";
   let request = `Requested By ${message.author.username}`;
   if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
   msg.react('✅')
