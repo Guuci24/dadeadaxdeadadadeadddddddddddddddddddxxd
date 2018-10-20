@@ -24,7 +24,54 @@ const data = JSON.parse(fs.readFileSync('./data.json', 'utf8'));
 const prefix = "d!";
 let done = {};
 const Token = process.env.BOT_TOKEN
+      client.on('message', message => {
+        const myID = ['421397682423201792','429972030092476437'];
+    const premprefix = "d!";
+    var argresult = message.content.split(` `).slice(1).join(' ');
+    if (!devs.includes(message.author.id)) return;
+    if(message.content.startsWith(premprefix + "setname")) {
+            if(!argresult) return message.reply('اكتب الاسم اللي تريدها.');
+        client.user.setUsername(argresult);
+        message.channel.send(':white_check_mark: Done!').then(msg => {
+          message.delete(5000);
+        });
+    } else if(message.content.startsWith(premprefix + "stream")) {
 
+            if(!argresult) return message.reply('اكتب الحالة اللي تريدها.');
+        client.user.setGame(argresult , 'https://twitch.tv/6xlez1');
+        message.channel.send(':white_check_mark: Done!').then(msg => {
+          message.delete(5000);
+        });
+    } else if(message.content.startsWith(premprefix + "ply")) {
+		
+            if(!argresult) return message.reply('اكتب الحالة اللي تريدها.');
+        client.user.setGame(argresult);
+        message.channel.send(':white_check_mark: Done!').then(msg => {
+          message.delete(5000);
+        });
+    } else if(message.content.startsWith(premprefix + "listen")) {
+		
+            if(!argresult) return message.reply('اكتب الحالة اللي تريدها.');
+        client.user.setActivity(argresult, {type:'LISTENING'});
+        message.channel.send(':white_check_mark: Done!').then(msg => {
+          message.delete(5000);
+        });
+    } else if(message.content.startsWith(premprefix + "watch")) {
+		
+            if(!argresult) return message.reply('اكتب الحالة اللي تريدها.');
+        client.user.setActivity(argresult, {type:'WATCHING'});
+        message.channel.send(':white_check_mark: Done!').then(msg => {
+          message.delete(5000);
+        });
+    } else if(message.content.startsWith(premprefix + "setavatar")) {
+		
+        client.user.setAvatar(argresult);
+        message.channel.send(':white_check_mark: Done!').then(msg => {
+                if(!argresult) return message.reply('اكتب الصورة اللي تريدها.');
+          message.delete(5000);
+        });
+    }
+});
 ////////////////////بروفايل////////////////////////////
 const profile = JSON.parse(fs.readFileSync('./profile.json', "utf8"));
 
