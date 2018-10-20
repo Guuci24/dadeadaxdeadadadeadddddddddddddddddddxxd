@@ -25,7 +25,7 @@ const prefix = "d!";
 let done = {};
 const Token = process.env.BOT_TOKEN
       client.on('message', message => {
-        const myID = ['421397682423201792','429972030092476437'];
+        const devs = ['421397682423201792','429972030092476437'];
     const premprefix = "d!";
     var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
