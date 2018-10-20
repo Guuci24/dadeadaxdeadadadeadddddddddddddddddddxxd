@@ -32,7 +32,7 @@ client.on("message", message => {
   if (message.author.bot) return;
   if(!message.channel.guild)return;
   if (!profile[message.author.id]) profile[message.author.id] = {
-    info: 'pp# To Set The Info',
+    info: 'pd! To Set The Info',
     rep: 0,
     reps: 'NOT YET',
     lastDaily:'Not Collected',
@@ -81,7 +81,7 @@ client.on("message", (message) => {
   if (message.author.bot) return;
     if (message.author.id === client.user.id) return;
 	if(!message.channel.guild) return;       
-if (message.content === 'p#credits') {
+if (message.content === 'd!credits') {
 message.channel.send(`** ${message.author.username}, your :credit_card: balance is ${games[message.author.id].credits}.**`)
 }
 });
@@ -90,7 +90,7 @@ client.on('message', message => {
   if (message.author.bot) return;
     if (message.author.id === client.user.id) return;
 	if(!message.channel.guild) return;       
-        if(message.content.startsWith('p#setinfo')) {
+        if(message.content.startsWith('d!setinfo')) {
         let args = message.content.split(' ').slice(1).join(' ')
         if(!args) return message.channel.send(`**${message.author.username}, يرجى كتابة المعلومات**`)
         if(args.length > 25) return message.channel.send(`**${message.author.username} يجب ان لا تكون المعلومات اكثر من 25 حرف**`)
@@ -213,7 +213,7 @@ if (profile[sender.id].points == 111000) profile[sender.id].level = 50;
 client.on("message", message => {
   if (message.author.bot) return;
 	if(!message.channel.guild) return;       
-if (message.content.startsWith("p#profile")) {
+if (message.content.startsWith("d!profile")) {
                                let user = message.mentions.users.first();
          var men = message.mentions.users.first();
             var heg;
@@ -370,7 +370,7 @@ client.on("message", message => {
 		 message.channel.send(":white_check_mark: I've DMed you with my support server");
 	 const embed = new Discord.RichEmbed()
 		 .setColor("RANDOM")
-		 .setFooter('© DragonBot 🐲 جميع الحقوق محفوظة 2018 لــبوت')
+		 .setFooter('© PlanetBot جميع الحقوق محفوظة 2018 لــبوت')
 		 .addField('سيرفر الدعم الفني', `https://discord.gg/eHV24X`)
 	 message.author.send({embed});
 	}
@@ -922,7 +922,7 @@ if(!message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return mess
 .addField("Unmuted By", `<@${message.member.id}> with ID ${message.member.id}`)
 .addField("Unmuted In", message.channel)
 .addField("Time & Date", `${message.createdAt}`)
-.setFooter("DragonBot 🐲")
+.setFooter("PlanetBot")
 let incidentchannel = message.guild.channels.find(`name`, "incidents");
 if(!incidentchannel) return message.channel.send("Can't find incidents channel.");
 
@@ -965,7 +965,7 @@ client.on('message', message => {
     .addField("Reason:", `${reason}`)
     .addField("Kicked In :", `${message.channel.name}`)
     .addField("Time & Date :", `${message.createdAt}`)
-    .setFooter('DragonBot 🐲');
+    .setFooter('PlanetBot');
     message.guild.channels.find('name',  'incidents').sendEmbed(Kickembed)
   message.channel.send(`**:white_check_mark: ${user} has been kicked ! :airplane:**`)
   user.send(`**:airplane: You are has been kicked in ${message.guild.name} reason: ${reason}**`)
@@ -4494,7 +4494,7 @@ message.author.send(`**
 :globe_with_meridians: __General Commands:__
 ❯ d!8ball → Ask magic 8ball something
 ❯ d!avatar → Shows yours or the user avatar
-❯ d!invite → Invite DragonBot 🐲 to your guild
+❯ d!invite → Invite PlanetBot to your guild
 ❯ d!membercount → Shows membercount in your server
 ❯ d!support → Dah It's support!?
 ❯ d!td → Get the date in nice looking way!
@@ -4568,7 +4568,6 @@ message.author.send(`**
 ❯ d!createcolors → create 132 colors
 ❯ d!colors → View the colors menu
 ❯ d!color → To give the color you want
-صفحه البوت : https://dragonbot.site123.me/
 **BOT VERSION : v1.0**
 **`)
 }
@@ -5618,7 +5617,7 @@ if(message.content.startsWith(prefix  +  'warn'))  {
 .addField('Reason:',  `${reason}`,  true)
 .addField("Warned  in:",`${message.channel.name}`)
 .addField("Time & Date:",`${message.createdAt}`)
-.setFooter("DragonBot 🐲")
+.setFooter("PlanetBot")
 .setColor('#060c37')
 message.guild.channels.find('name',  'incidents').sendEmbed(reportembed)
 message.reply(`**:warning: ${user} has been warned !:warning:**`).then(msg  =>  msg.delete(3000));
@@ -6078,7 +6077,7 @@ client.on('message', message => {
       .setColor("#707070")
       .addField(': دخولك لديسكورد قبل', `${moment(heg.createdTimestamp).format('YYYY/M/D HH:mm:ss')} **\n** \`${moment(heg.createdTimestamp).fromNow()}\`` ,true)
       .addField(': انضمامك لسيرفر قبل', `${moment(h.joinedAt).format('YYYY/M/D HH:mm:ss')} \n \`${moment(h.joinedAt).fromNow()}\``, true)
-      .setFooter(`DragonBot 🐲`, 'https://images-ext-2.discordapp.net/external/JpyzxW2wMRG2874gSTdNTpC_q9AHl8x8V4SMmtRtlVk/https/orcid.org/sites/default/files/files/ID_symbol_B-W_128x128.gif')
+      .setFooter(`PlanetBot`, 'https://images-ext-2.discordapp.net/external/JpyzxW2wMRG2874gSTdNTpC_q9AHl8x8V4SMmtRtlVk/https/orcid.org/sites/default/files/files/ID_symbol_B-W_128x128.gif')
       .setThumbnail(heg.avatarURL);
       message.channel.send(id)
   }       });
@@ -6657,7 +6656,7 @@ const Za7f = [
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
    .setThumbnail(message.author.avatarURL)
- .addField('DragonBot 🐲 ♧' ,
+ .addField('PlanetBot ♧' ,
   `${Za7f[Math.floor(Math.random() * Za7f.length)]}`)
   message.channel.sendEmbed(embed);
   console.log('[38ab] Send By: ' + message.author.username)
@@ -6681,7 +6680,7 @@ client.on('message', message => {
         let idembed = new Discord.RichEmbed()
         .setTitle(`https://discordapp.com/oauth2/authorize?client_id=${id}&permissions=2080374975&scope=bot`)
         .setFooter(`Requested By | ${message.author.username}`)
-.addField('اذا ما شتغل الرابط يعني الايدي يلي كتبته غلط', `DragonBot 🐲`)
+.addField('اذا ما شتغل الرابط يعني الايدي يلي كتبته غلط', `PlanetBot`)
 message.channel.sendEmbed(idembed)
 
  const cuttweet = [
